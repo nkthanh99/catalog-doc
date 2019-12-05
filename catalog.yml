@@ -177,7 +177,6 @@ paths:
       summary: Create new sale channel
       tags:
         - sale_channels
-      summary: Create new sale channel
       requestBody:
         $ref: components/requestBodies/@sale_channels.yml#/post
       responses:
