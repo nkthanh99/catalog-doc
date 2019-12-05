@@ -1,0 +1,30 @@
+get:
+  200:
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                results:
+                  type: object
+                  allOf:
+                    - $ref: ../schemas/ObjectList.yml
+                    - type: object
+                      properties:
+                        brands:
+                          type: array
+                          items:
+                            $ref: ../schemas/Brand.yml
+  400:
+    $ref: BadRequest.yml
+
+post:
+  200:
+    content:
+      application/json:
+        schema:
+          $ref: Success.yml
+  400:
+    $ref: BadRequest.yml

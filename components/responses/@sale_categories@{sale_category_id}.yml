@@ -1,0 +1,17 @@
+patch:
+  200:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            image:
+              type: string
+            is_active:
+              type: integer
+            name:
+              type: string
+            code:
+              type: string
+  400:
+    $ref: BadRequest.yml

@@ -1,0 +1,31 @@
+get:
+  - name: page
+    in: query
+    schema:
+      type: integer
+  - name: pageSize
+    in: query
+    schema:
+      type: integer
+  - name: query
+    in: query
+  - name: sortField
+    in: query
+  - name: brandId
+    in: query
+  - name: attributeSetId
+    in: query
+  - name: productLineId
+    in: query
+  - name: categoryId
+    in: query
+  - name: sellingStatus
+    in: query
+  - name: channelId
+    in: query
+  - name: objective
+    in: query
+  - name: sortOrder
+    in: query
+  - name: isBundle
+    in: query    

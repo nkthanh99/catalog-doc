@@ -1,0 +1,13 @@
+get:
+  200:
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                result:
+                  $ref: ../schemas/SaleCategoryNode.yml
+  400:
+    $ref: BadRequest.yml

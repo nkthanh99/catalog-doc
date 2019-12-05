@@ -1,0 +1,23 @@
+get:
+  - in: query
+    name: query
+    schema:
+      type: string
+  - in: query
+    name: is_active
+    schema:
+      type: integer
+      enum: [0, 1]
+  - in: query
+    name: approved_status
+    schema:
+      type: integer
+      enum: [0, 1]
+  - in: query
+    name: page_size
+    schema:
+      type: integer
+  - in: query
+    name: page
+    schema:
+      type: integer  

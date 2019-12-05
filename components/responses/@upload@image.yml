@@ -1,0 +1,22 @@
+post:
+  200:
+    description: Upload file response
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                result:
+                  type: object
+                  properties:
+                    file_id:
+                      type: integer
+                    url:
+                      type: string
+                      format: url
+                    label:
+                      type: string
+  400:
+    $ref: BadRequest.yml

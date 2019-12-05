@@ -1,0 +1,6 @@
+post:
+  required: true
+  content:
+    application/json:
+      schema:
+        $ref: ../schemas/GenericSaleCategory.yml

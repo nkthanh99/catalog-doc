@@ -1,0 +1,18 @@
+post:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        required:
+          - name
+        properties:
+          name:
+            type: string
+          code:
+            type: string
+          logo:
+            type: string
+          doc_request:
+            type: boolean
+            default: true

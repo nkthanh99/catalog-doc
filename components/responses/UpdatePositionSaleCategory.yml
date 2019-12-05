@@ -1,5 +1,0 @@
-updatePositionSaleCategory:
-  content:
-    application/json:
-      schema:
-        $ref: '#/components/responses/Success'  

@@ -1,0 +1,6 @@
+patch:
+  - in: path
+    name: id_node
+    required: true
+    schema:
+      type: integer  

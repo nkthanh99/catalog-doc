@@ -1,45 +1,191 @@
 openapi: 3.0.0
-
 info:
-  $ref: info.yml
-
+  title: Catalog
+  description: Product management system
+  version: 2.0.0
 servers:
-  $ref: servers.yml
-
+  - url: https://catalog-dev.phongvu.vn
+    description: Develop server for dev and test
 tags:
-  $ref: tags.yml
+  - name: brand
+    description: Brand management
+  - name: product
+    description: Product management
+  - name: import
+    description: Import operations
+  - name: sale_channels
+    description: Sale channel
+  - name: product_line
+    description: Product line
+  - name: upload
+    description: Upload operations
+  - name: sale_category
+    description: Slae category operations
+  - name: extra
 
 components:
-  schemas:
-    Brand:
-      $ref: components/schemas/Brand.yml
-    BrandList:
-      $ref: components/schemas/BrandList.yml
-    Extra:
-      $ref: components/schemas/Extra.yml
-    GenericCategory:
-      $ref: components/schemas/GenericCategory.yml
-    GenericProduct:
-      $ref: components/schemas/GenericProduct.yml
-    GenericProductLine:
-      $ref: components/schemas/GenericProductLine.yml
-    GenericSaleCategory:
-      $ref: components/schemas/GenericSaleCategory.yml
-    ImportHistory:
-      $ref: components/schemas/ImportHistory.yml
-    ImportHistoryList:
-      $ref: components/schemas/ImportHistoryList.yml
-    ObjectList:
-      $ref: components/schemas/ObjectList.yml
-    PatchSaleCategory:
-      $ref: components/schemas/PatchSaleCategory.yml
-    ProductLine:
-      $ref: components/schemas/ProductLine.yml
-    ProductList:
-      $ref: components/schemas/ProductList.yml
-    SaleCategoryNode:
-      $ref: components/schemas/SaleCategoryNode.yml
-    SaleChannel:
-      $ref: components/schemas/SaleChannel.yml
-    SaleChannelList:
-      $ref: components/schemas/SaleChannelList.yml
+  securitySchemes:
+    IAMAuth:
+      $ref: components/securitySchemes/IAMAuth.yml
+
+security:
+  - IAMAuth: []
+
+paths:
+  /brands:
+    get:
+      tags:
+        - brand
+      summary: Get list of brand
+      parameters:
+        $ref: components/parameters/@brands.yml#/get
+      responses:
+        $ref: components/responses/@brands.yml#/get
+    post:
+      tags:
+        - brand
+      summary: Create new brand
+      requestBody:
+        $ref: components/requestBodies/@brands.yml#/post
+      responses:
+        $ref: components/responses/@brands.yml#/post
+  /brands/{brand_id}:
+    patch:
+      tags:
+        - brand
+      summary: Patch brand
+      parameters:
+        $ref: components/parameters/@brands@{brandId}.yml#/patch
+      requestBody:
+        $ref: components/requestBodies/@brands@{brandId}.yml#/patch
+      responses:
+        $ref: components/responses/@brands@{brandId}.yml#/patch
+    get:
+      tags:
+        - brand
+      summary: Get detail brand
+      parameters:
+        $ref: components/parameters/@brands@{brandId}.yml#/get
+      responses:
+        $ref: components/responses/@brands@{brandId}.yml#/get
+  /extra-data:
+    get:
+      tags:
+        - extra
+      parameters:
+        $ref: components/parameters/@extra-data.yml#/get
+      responses:
+        $ref: components/responses/@extra-data.yml#/get  
+  /import/history:
+    get:
+      tags:
+        - import
+      summary: Get import history
+      parameters:
+        $ref: components/parameters/@import@history.yml#/get
+      responses:
+        $ref: components/responses/@import@history.yml#/get 
+  /upload/doc:
+    post:
+      tags:
+        - upload
+      requestBody:
+        $ref: components/requestBodies/@upload@doc.yml#/post
+      responses:
+        $ref: components/responses/@upload@doc.yml#/post
+  /upload/image:
+    post:
+      tags:
+        - upload
+      requestBody:
+        $ref: components/requestBodies/@upload@image.yml#/post
+      responses:
+        $ref: components/responses/@upload@image.yml#/post
+  /product_lines:
+    get:
+      tags:
+        - product_line
+      responses:
+        $ref: components/responses/@product_lines.yml#/get
+  '/product_lines/{line_id}/category':
+    get:
+      tags:
+        - product_line
+      parameters:
+        $ref: components/parameters/@product_lines@{line_id}@category.yml#/get
+      responses:
+        $ref: components/responses/@product_lines@{line_id}@category.yml#/get
+  /sale_categories:
+    post:
+      tags:
+        - sale_category
+      requestBody:
+        $ref: components/requestBodies/@sale_categories.yml#/post
+      responses:
+        $ref: components/responses/@sale_categories.yml#/post
+    get:
+      tags:
+        - sale_category
+      parameters:
+        $ref: components/parameters/@sale_categories.yml#/get
+  '/sale_categories/{id_node}/update_position':
+    patch:
+      tags:
+        - sale_category
+      parameters:
+        $ref: components/parameters/@sale_categories@{id_node}@update_position.yml#/patch
+      requestBody:
+        $ref: components/requestBodies/@sale_categories@{id_node}@update_position.yml#patch
+      responses:
+        $ref: components/responses/@sale_categories@{id_node}@update_position.yml#/patch
+  '/sale_categories/{sale_category_id}/children':
+    get:
+      tags:
+        - sale_category
+      parameters:
+        $ref: components/parameters/@sale_categories@{sale_category_id}@children.yml
+      responses:
+        $ref: components/responses/@sale_categories@{sale_category_id}@children.yml
+  /sale_categories/{sale_category_id}:
+    patch:
+      tags:
+        - sale_category
+      parameters:
+        $ref: components/parameters/@sale_categories@{sale_category_id}.yml#/patch
+      requestBody:
+        $ref: components/requestBodies/@sale_categories@{sale_category_id}.yml#/patch
+      responses:
+        $ref: components/responses/@sale_categories@{sale_category_id}.yml#/patch
+  /sale_channels:
+    get:
+      tags:
+        - sale_channels
+      parameters:
+        $ref: components/parameters/@sale_channels.yml#/get
+      responses:
+        $ref: components/responses/@sale_channels.yml#/get
+    post:
+      tags:
+        - sale_channels
+      summary: Create new sale channel
+      requestBody:
+        $ref: components/requestBodies/@sale_channels.yml#/post
+      responses:
+        $ref: components/responses/@sale_channels.yml#/post
+  '/sale_channels/{sale_channel_id}':
+    patch:
+      tags:
+        - sale_channels
+      parameters:
+        $ref: components/parameters/@sale_channels@{sale_channel_id}.yml#/patch
+      requestBody:
+        $ref: components/requestBodies/@sale_channels@{sale_channel_id}.yml#/patch
+      responses:
+        $ref: components/responses/@sale_channels@{sale_channel_id}.yml#/patch
+    get:
+      tags:
+        - sale_channels
+      parameters:
+        $ref: components/parameters/@sale_channels@{sale_channel_id}.yml#/get
+      responses:
+        $ref: components/responses/@sale_channels@{sale_channel_id}.yml#/get

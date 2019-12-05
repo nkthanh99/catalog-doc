@@ -1,0 +1,29 @@
+get:
+  200:
+    description: Get sale channel detail
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                result:
+                  $ref: ../schemas/SaleChannel.yml
+  400:
+    $ref: BadRequest.yml
+
+patch:
+  200:
+    description: Patch sale channel
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                result:
+                  $ref: ../schemas/SaleChannel.yml
+  400:
+    $ref: BadRequest.yml

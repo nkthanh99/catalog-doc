@@ -1,0 +1,6 @@
+patch:
+  - in: path
+    name: sale_category_id
+    required: true
+    schema:
+      type: integer  

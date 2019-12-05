@@ -1,0 +1,12 @@
+get:
+  - in: path
+    name: sale_channel_id
+    required: true
+    schema:
+      type: integer
+patch:
+  - in: path
+    name: sale_channel_id
+    required: true
+    schema:
+      type: integer  

@@ -1,0 +1,28 @@
+get:
+  200:
+    description: Sale channel list
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                result:
+                  $ref: ../schemas/SaleChannelList.yml  
+  400:
+    $ref: BadRequest.yml
+post:
+  200:
+    description: Create sale channel successful
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                result:
+                  $ref: ../schemas/SaleChannel.yml
+  400:
+    $ref: BadRequest.yml

@@ -1,0 +1,22 @@
+get:
+  200:
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                results:
+                  $ref: ../schemas/Brand.yml
+  400:
+    $ref: BadRequest.yml
+
+patch:
+  200:
+    content:
+      application/json:
+        schema:
+          $ref: Success.yml
+  400:
+    $ref: BadRequest.yml  

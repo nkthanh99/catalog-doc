@@ -1,0 +1,16 @@
+patch:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          image:
+            type: string
+            format: url
+          is_active:
+            type: integer
+          name:
+            type: string
+          code:
+            type: string  

@@ -1,6 +1,0 @@
-allOf:
-  - $ref: Success.yml
-  - type: object
-    properties:
-      results:
-        $ref: ../schemas/BrandList.yml  

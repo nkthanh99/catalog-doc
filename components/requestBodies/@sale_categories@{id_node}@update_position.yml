@@ -1,0 +1,14 @@
+patch:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          parent_id:
+            type: integer
+          left_node_id:
+            oneOf:
+              - type: integer
+              - type: string
+                nullable: true  

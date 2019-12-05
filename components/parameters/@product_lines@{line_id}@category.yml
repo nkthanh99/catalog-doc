@@ -1,0 +1,6 @@
+get:
+  - in: path
+    name: line_id
+    required: true
+    schema:
+      type: integer  

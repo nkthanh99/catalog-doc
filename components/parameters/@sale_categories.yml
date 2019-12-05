@@ -1,0 +1,6 @@
+get:
+  - in: query
+    name: level
+    required: true
+    schema:
+      type: integer    

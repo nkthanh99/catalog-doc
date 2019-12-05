@@ -1,0 +1,8 @@
+patch:
+  200:
+    content:
+      application/json:
+        schema:
+          $ref: Success.yml
+  400:
+    $ref: BadRequest.yml

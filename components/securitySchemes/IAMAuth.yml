@@ -1,3 +1,4 @@
 type: http
 scheme: bearer
-bearerFormat: JWT  
+bearerFormat: JWT
+description: Authentication and authorization with IAM service
