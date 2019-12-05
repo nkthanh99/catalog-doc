@@ -75,7 +75,7 @@ paths:
       parameters:
         $ref: components/parameters/@extra-data.yml#/get
       responses:
-        $ref: components/responses/@extra-data.yml#/get  
+        $ref: components/responses/@extra-data.yml#/get
   /import/history:
     get:
       tags:
@@ -84,9 +84,10 @@ paths:
       parameters:
         $ref: components/parameters/@import@history.yml#/get
       responses:
-        $ref: components/responses/@import@history.yml#/get 
+        $ref: components/responses/@import@history.yml#/get
   /upload/doc:
     post:
+      summary: Upload excel file for import product
       tags:
         - upload
       requestBody:
@@ -95,6 +96,7 @@ paths:
         $ref: components/responses/@upload@doc.yml#/post
   /upload/image:
     post:
+      summary: Upload logo product image
       tags:
         - upload
       requestBody:
@@ -103,12 +105,14 @@ paths:
         $ref: components/responses/@upload@image.yml#/post
   /product_lines:
     get:
+      summary: Get product line
       tags:
         - product_line
       responses:
         $ref: components/responses/@product_lines.yml#/get
   '/product_lines/{line_id}/category':
     get:
+      summary: List of category for product line
       tags:
         - product_line
       parameters:
@@ -117,6 +121,7 @@ paths:
         $ref: components/responses/@product_lines@{line_id}@category.yml#/get
   /sale_categories:
     post:
+      summary: Create new sale category
       tags:
         - sale_category
       requestBody:
@@ -128,26 +133,29 @@ paths:
         - sale_category
       parameters:
         $ref: components/parameters/@sale_categories.yml#/get
-  '/sale_categories/{id_node}/update_position':
+  '/sale_categories/{id_node}/position':
     patch:
+      summary: Move sale category node in sale category tree
       tags:
         - sale_category
       parameters:
-        $ref: components/parameters/@sale_categories@{id_node}@update_position.yml#/patch
+        $ref: components/parameters/@sale_categories@{id_node}@position.yml#/patch
       requestBody:
-        $ref: components/requestBodies/@sale_categories@{id_node}@update_position.yml#patch
+        $ref: components/requestBodies/@sale_categories@{id_node}@position.yml#/patch
       responses:
-        $ref: components/responses/@sale_categories@{id_node}@update_position.yml#/patch
+        $ref: components/responses/@sale_categories@{id_node}@position.yml#/patch
   '/sale_categories/{sale_category_id}/children':
     get:
+      summary: Get sale category tree with sale category as root
       tags:
         - sale_category
       parameters:
-        $ref: components/parameters/@sale_categories@{sale_category_id}@children.yml
+        $ref: components/parameters/@sale_categories@{sale_category_id}@children.yml#/get
       responses:
-        $ref: components/responses/@sale_categories@{sale_category_id}@children.yml
+        $ref: components/responses/@sale_categories@{sale_category_id}@children.yml#/get
   /sale_categories/{sale_category_id}:
     patch:
+      summary: Patch sale category
       tags:
         - sale_category
       parameters:
@@ -158,6 +166,7 @@ paths:
         $ref: components/responses/@sale_categories@{sale_category_id}.yml#/patch
   /sale_channels:
     get:
+      summary: Get sale channel list
       tags:
         - sale_channels
       parameters:
@@ -165,6 +174,7 @@ paths:
       responses:
         $ref: components/responses/@sale_channels.yml#/get
     post:
+      summary: Create new sale channel
       tags:
         - sale_channels
       summary: Create new sale channel
@@ -174,6 +184,7 @@ paths:
         $ref: components/responses/@sale_channels.yml#/post
   '/sale_channels/{sale_channel_id}':
     patch:
+      summary: Patch sale channel
       tags:
         - sale_channels
       parameters:
@@ -183,6 +194,7 @@ paths:
       responses:
         $ref: components/responses/@sale_channels@{sale_channel_id}.yml#/patch
     get:
+      summary: Get sale channel detail
       tags:
         - sale_channels
       parameters:
