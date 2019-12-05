@@ -1,0 +1,8 @@
+allOf:
+  - $ref: ObjectList.yml
+  - type: object
+    properties:
+      sale_channels:
+        type: array
+        items:
+          $ref: SaleChannel.yml

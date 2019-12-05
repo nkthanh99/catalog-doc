@@ -1,0 +1,12 @@
+type: object
+properties:
+  id:
+    type: integer
+  code:
+    type: string
+  name:
+    type: string
+  children:
+    type: array
+    items:
+      $ref: 'SaleCategoryNode.yml'

@@ -1,0 +1,10 @@
+description: Get sale channel detail
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: CreateSaleCategory.yml
+        - type: object
+          properties:
+            result:
+              $ref: ../schemas/SaleChannel.yml

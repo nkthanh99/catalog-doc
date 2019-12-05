@@ -1,0 +1,31 @@
+'/sale_channels/{sale_channel_id}':
+  patch:
+    tags:
+      - sale_channels
+    parameters:
+      - in: path
+        name: sale_channel_id
+        required: true
+        schema:
+          type: integer
+    requestBody:
+      $ref: '#/components/requestBodies/patchSaleChannel'
+    responses:
+      '200':
+        $ref: '#/components/responses/patchSaleChannel'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+  get:
+    tags:
+      - sale_channels
+    parameters:
+      - in: path
+        name: sale_channel_id
+        required: true
+        schema:
+          type: integer
+    responses:
+      '200':
+        $ref: '#/components/responses/getSaleChannel'
+      '400':
+        $ref: '#/components/responses/BadRequest'  

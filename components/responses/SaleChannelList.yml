@@ -1,0 +1,11 @@
+saleChannelList:
+  description: Sale channel list
+  content:
+    application/json:
+      schema:
+        allOf:
+          - $ref: '#/components/responses/Success'
+          - type: object
+            properties:
+              result:
+                $ref: '#/components/schemas/saleChannelList'  

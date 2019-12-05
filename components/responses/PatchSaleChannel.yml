@@ -1,0 +1,10 @@
+description: Patch sale channel
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: Success.yml
+        - type: object
+          properties:
+            result:
+              $ref: ../schemas/SaleChannel.yml

@@ -1,0 +1,20 @@
+/sale_categories:
+  post:
+    tags:
+      - sale_category
+    requestBody:
+      $ref: '#/components/requestBodies/createSaleCategory'
+    responses:
+      '200':
+        $ref: '#/components/responses/createSaleCategory'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+  get:
+    tags:
+      - sale_category
+    parameters:
+      - in: query
+        name: level
+        required: true
+        schema:
+          type: integer  

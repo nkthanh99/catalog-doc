@@ -1,0 +1,18 @@
+type: object
+properties:
+  id:
+    type: integer
+  product_id:
+    type: integer
+  type:
+    type: string
+  status:
+    type: string
+  updated_by_email:
+    type: string
+    format: email
+  updated_by_name:
+    type: string
+  updated_at:
+    type: string
+    format: datetime  

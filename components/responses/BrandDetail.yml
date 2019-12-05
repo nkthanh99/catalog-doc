@@ -1,0 +1,6 @@
+allOf:
+  - $ref: Success.yml
+  - type: object
+    properties:
+      results:
+        $ref: ../schemas/Brand.yml

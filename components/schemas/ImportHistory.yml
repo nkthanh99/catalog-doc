@@ -1,0 +1,25 @@
+type: object
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  status:
+    type: string
+  total_row:
+    type: integer
+  total_row_success:
+    type: integer
+  path:
+    type: object
+  type:
+    type: string
+  success_path:
+    type: object
+  note:
+    type: string
+  created_by:
+    type: string
+  created_at:
+    type: string
+    format: datetime  

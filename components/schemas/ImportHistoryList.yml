@@ -1,0 +1,8 @@
+allOf:
+  - $ref: ObjectList.yml
+  - type: object
+    properties:
+      history_list:
+        type: array
+        items:
+          $ref: ImportHistory.yml  

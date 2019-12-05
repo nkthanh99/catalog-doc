@@ -1,0 +1,10 @@
+description: List of history for import file
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: Success.yml
+        - type: object
+          properties:
+            result:
+              $ref: ../schemas/ImportHistoryList.yml

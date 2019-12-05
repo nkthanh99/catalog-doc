@@ -1,0 +1,12 @@
+description: Product line
+content:
+  application/json:
+    schema:
+      allOf:
+        - $ref: Success.yml
+        - type: object
+          properties:
+            result:
+              type: array
+              items:
+                $ref: ../schemas/GenericProductLine.yml  

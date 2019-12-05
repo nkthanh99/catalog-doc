@@ -1,0 +1,39 @@
+'/brands/{brandId}':
+  patch:
+    tags:
+      - brand
+    summary: Patch brand
+    parameters:
+      - name: brandId
+        in: path
+        schema:
+          type: integer
+        required: true
+    requestBody:
+      $ref: '#/components/requestBodies/patchBrand'
+    responses:
+      '200':
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/responses/Success'
+      '400':
+        $ref: '#/components/responses/BadRequest'
+  get:
+    tags:
+      - brand
+    summary: Get detail brand
+    parameters:
+      - name: brandId
+        in: path
+        schema:
+          type: integer
+        required: true
+    responses:
+      '200':
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/responses/brandDetail'
+      '400':
+        $ref: '#/components/responses/BadRequest'  

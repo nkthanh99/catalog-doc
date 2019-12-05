@@ -1,0 +1,303 @@
+type: object
+properties:
+  brands:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        code:
+          type: string
+        url_key:
+          type: string
+  attribute_sets:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+  product_lines:
+    type: aray
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        code:
+          type: string
+  categories:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        code:
+          type: string
+        name:
+          type: string
+        is_active:
+          type: integer
+        parent_id:
+          type: integer
+        seller_id:
+          type: integer
+        line_id:
+          type: integer
+        line_name:
+          type: string
+  sale_categories:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        code:
+          type: integer
+        is_active:
+          type: integer
+        parent_id:
+          type: integer
+  selling_statuses:
+    type: array
+    items:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        position:
+          type: integer
+  editing_statuses:
+    type: array
+    items:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        state:
+          type: string
+        config:
+          type: string
+        can_moved_status:
+          type: string
+  objectives:
+    type: array
+    items:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        position:
+          type: integer
+  product_types:
+    type: array
+    items:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        position:
+          type: integer
+  colors:
+    type: array
+    items:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        id:
+          type: integer
+  product_units:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        code:
+          type: string
+        name:
+          type: string
+  units:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        code:
+          type: string
+        name:
+          type: string
+  channels:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        code:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        terminals:
+          type: array
+          items:
+            type: object
+            properties:
+              code:
+                type: string
+              name:
+                type: string
+              region:
+                type: string
+              province:
+                type: string
+              province_code:
+                type: string
+              district:
+                type: string
+              district_code:
+                type: string
+              ward:
+                type: string
+              ward_code:
+                type: string
+              address:
+                type: string
+        is_active:
+          type: integer
+  product_groups:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        attribute_set_id:
+          type: integer
+  seo_configs:
+    type: array
+    items:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+  channel_types:
+    type: array
+    items:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+        position:
+          type: integer
+  reason_types:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        code:
+          type: string
+        name:
+          type: string
+  seo_object_types:
+    type: array
+    items:
+      type: object
+      properties:
+        properties:
+          code:
+            type: string
+          name:
+            type: string
+  sellers:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        code:
+          type: string
+        status:
+          type: integer
+        english_name:
+          type: string
+        enterprise_code:
+          type: string
+        tax_number:
+          type: string
+        founding_date:
+          type: string
+          format: datetime
+        display_name:
+          type: string
+        address:
+          type: string
+        contract_no:
+          type: string
+        extra_info:
+          type: object
+  import_types:
+    type: array
+    items:
+      type: object
+      properties:
+        code:
+          type: string
+        name:
+          type: string
+  product_status:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+        code:
+          type: string
+        labels:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              name:
+                type: string
+              code:
+                type: string  

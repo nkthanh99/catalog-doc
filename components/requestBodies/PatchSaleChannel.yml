@@ -1,0 +1,15 @@
+patchSaleChannel:
+  required: true
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          name:
+            type: string
+          type:
+            type: string
+          seller_id:
+            type: integer
+          is_active:
+            type: integer  

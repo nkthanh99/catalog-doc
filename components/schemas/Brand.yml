@@ -1,0 +1,22 @@
+type: object
+properties:
+  code:
+    type: string
+  name:
+    type: string
+  is_active:
+    type: integer
+  doc_request:
+    type: integer
+  approved_status:
+    type: integer
+  path:
+    type: string
+  internal_code:
+    type: string
+  created_at:
+    type: string
+    format: datetime
+  updated_at:
+    type: string
+    format: datetime  

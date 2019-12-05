@@ -1,0 +1,45 @@
+openapi: 3.0.0
+
+info:
+  $ref: info.yml
+
+servers:
+  $ref: servers.yml
+
+tags:
+  $ref: tags.yml
+
+components:
+  schemas:
+    Brand:
+      $ref: components/schemas/Brand.yml
+    BrandList:
+      $ref: components/schemas/BrandList.yml
+    Extra:
+      $ref: components/schemas/Extra.yml
+    GenericCategory:
+      $ref: components/schemas/GenericCategory.yml
+    GenericProduct:
+      $ref: components/schemas/GenericProduct.yml
+    GenericProductLine:
+      $ref: components/schemas/GenericProductLine.yml
+    GenericSaleCategory:
+      $ref: components/schemas/GenericSaleCategory.yml
+    ImportHistory:
+      $ref: components/schemas/ImportHistory.yml
+    ImportHistoryList:
+      $ref: components/schemas/ImportHistoryList.yml
+    ObjectList:
+      $ref: components/schemas/ObjectList.yml
+    PatchSaleCategory:
+      $ref: components/schemas/PatchSaleCategory.yml
+    ProductLine:
+      $ref: components/schemas/ProductLine.yml
+    ProductList:
+      $ref: components/schemas/ProductList.yml
+    SaleCategoryNode:
+      $ref: components/schemas/SaleCategoryNode.yml
+    SaleChannel:
+      $ref: components/schemas/SaleChannel.yml
+    SaleChannelList:
+      $ref: components/schemas/SaleChannelList.yml

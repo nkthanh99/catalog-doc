@@ -1,0 +1,9 @@
+uploadDocFile:
+  required: true
+  content:
+    multipart/form-data:
+      schema:
+        type: object
+        properties:
+          file:
+            type: binary  

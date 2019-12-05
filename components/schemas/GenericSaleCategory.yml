@@ -1,0 +1,16 @@
+type: object
+properties:
+  image:
+    type: string
+  is_active:
+    type: integer
+  name:
+    type: string
+  code:
+    type: string
+  parent_id:
+    type: integer
+  products:
+    type: array
+    items:
+      type: integer  

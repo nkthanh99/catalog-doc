@@ -1,0 +1,9 @@
+/product_lines:
+  get:
+    tags:
+      - product_line
+    responses:
+      '200':
+        $ref: '#/components/responses/genericProductLineList'
+      '400':
+        $ref: '#/components/responses/BadRequest'  

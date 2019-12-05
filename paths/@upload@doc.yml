@@ -1,0 +1,11 @@
+/upload/doc:
+  post:
+    tags:
+      - upload
+    requestBody:
+      $ref: '#/components/requestBodies/uploadDocFile'
+    responses:
+      '200':
+        $ref: '#/components/responses/uploadFile'
+      '400':
+        $ref: '#/components/responses/BadRequest'  

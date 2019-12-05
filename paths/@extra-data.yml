@@ -1,0 +1,18 @@
+/extra-data:
+  get:
+    tags:
+      - extra
+    parameters:
+      - in: query
+        name: type
+        schema:
+          type: string
+      - in: query
+        name: restrict_data
+        schema:
+          type: string
+    responses:
+      '200':
+        $ref: '#/components/responses/extra'
+      '400':
+        $ref: '#/components/responses/BadRequest'  
