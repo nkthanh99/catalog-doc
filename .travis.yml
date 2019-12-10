@@ -2,6 +2,7 @@ lang: nodejs
 
 before_install:
   - npm install redoc-cli
+  - export PATH=$(npm bin):$PATH
 
 script:
   - redoc-cli
