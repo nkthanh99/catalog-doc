@@ -5,4 +5,12 @@ before_install:
   - export PATH=$(npm bin):$PATH
 
 script:
-  - ./deploy.sh
+  - redoc-cli bundle -o build/index.html openapi.yml
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  local_dir: build
+  on:
+    branch: master
