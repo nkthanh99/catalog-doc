@@ -10,7 +10,7 @@ InternalServer:
             default: ERROR
           message:
             type: string
-          errors:
+          result:
             type: array
             items:
               type: object

@@ -4,7 +4,7 @@ get:
     schema:
       type: string
   - in: query
-    name: is_active
+    name: isActive
     schema:
       type: integer
       enum: [0, 1]

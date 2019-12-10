@@ -6,7 +6,7 @@ required:
   - categoryId
   - saleCategoryId
   - attributeSetId
-  - unit_id
+  - unitId
   - warrantyMonths
   - warrantyDescription
   - model
@@ -17,9 +17,9 @@ required:
 properties:
   name:
     type: string
-  brand_id:
+  brandId:
     type: integer
-  is_bundle:
+  isBundle:
     type: integer
   categoryId:
     type: integer

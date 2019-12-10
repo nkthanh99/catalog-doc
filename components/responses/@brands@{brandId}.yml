@@ -7,7 +7,7 @@ get:
             - $ref: Success.yml
             - type: object
               properties:
-                results:
+                result:
                   $ref: ../schemas/Brand.yml
   400:
     $ref: ClientErrors.yml#/BadRequest

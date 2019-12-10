@@ -48,11 +48,11 @@ properties:
           type: integer
         sellerId:
           type: integer
-        line_id:
+        lineId:
           type: integer
-        line_name:
+        lineName:
           type: string
-  sale_categories:
+  saleCategories:
     type: array
     items:
       type: object
@@ -63,11 +63,11 @@ properties:
           type: string
         code:
           type: integer
-        is_active:
+        isActive:
           type: integer
-        parent_id:
+        parentId:
           type: integer
-  selling_statuses:
+  sellingStatus:
     type: array
     items:
       type: object
@@ -78,7 +78,7 @@ properties:
           type: string
         position:
           type: integer
-  editing_statuses:
+  editingStatus:
     type: array
     items:
       type: object
@@ -91,7 +91,7 @@ properties:
           type: string
         config:
           type: string
-        can_moved_status:
+        canMovedStatus:
           type: string
   objectives:
     type: array
@@ -104,7 +104,7 @@ properties:
           type: string
         position:
           type: integer
-  product_types:
+  productTypes:
     type: array
     items:
       type: object
@@ -126,7 +126,7 @@ properties:
           type: string
         id:
           type: integer
-  product_units:
+  productUnits:
     type: array
     items:
       type: object
@@ -174,21 +174,21 @@ properties:
                 type: string
               province:
                 type: string
-              province_code:
+              provinceCode:
                 type: string
               district:
                 type: string
-              district_code:
+              districtCode:
                 type: string
               ward:
                 type: string
-              ward_code:
+              wardCode:
                 type: string
               address:
                 type: string
-        is_active:
+        isActive:
           type: integer
-  product_groups:
+  productGroups:
     type: array
     items:
       type: object
@@ -197,9 +197,9 @@ properties:
           type: integer
         name:
           type: string
-        attribute_set_id:
+        attributeSetId:
           type: integer
-  seo_configs:
+  seoConfigs:
     type: array
     items:
       type: object
@@ -208,7 +208,7 @@ properties:
           type: string
         name:
           type: string
-  channel_types:
+  channelTypes:
     type: array
     items:
       type: object
@@ -219,7 +219,7 @@ properties:
           type: string
         position:
           type: integer
-  reason_types:
+  reasonTypes:
     type: array
     items:
       type: object
@@ -230,7 +230,7 @@ properties:
           type: string
         name:
           type: string
-  seo_object_types:
+  seoObjectTypes:
     type: array
     items:
       type: object
@@ -253,24 +253,24 @@ properties:
           type: string
         status:
           type: integer
-        english_name:
+        englishName:
           type: string
-        enterprise_code:
+        enterpriseCode:
           type: string
-        tax_number:
+        taxNumber:
           type: string
-        founding_date:
+        foundingDate:
           type: string
           format: datetime
-        display_name:
+        displayName:
           type: string
         address:
           type: string
-        contract_no:
+        contractNo:
           type: string
-        extra_info:
+        extraInfo:
           type: object
-  import_types:
+  importTypes:
     type: array
     items:
       type: object
@@ -279,7 +279,7 @@ properties:
           type: string
         name:
           type: string
-  product_status:
+  productStatus:
     type: array
     items:
       type: object
@@ -298,4 +298,4 @@ properties:
               name:
                 type: string
               code:
-                type: string  
+                type: string
