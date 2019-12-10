@@ -1,0 +1,6 @@
+get:
+  - in: path
+    name: productId
+    required: true
+    schema:
+      type: integer

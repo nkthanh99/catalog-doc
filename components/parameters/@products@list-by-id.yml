@@ -1,0 +1,7 @@
+get:
+  - in: query
+    name: ids
+    required: true
+    schema:
+      type: string
+    example: 1,2,3,4,5

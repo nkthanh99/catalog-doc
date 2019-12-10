@@ -259,3 +259,21 @@ paths:
         $ref: components/requestBodies/@products@import@{attributeSetId}.yml#/post
       reponses:
         $ref: components/responses/@products@import@{attributeSetId}.yml#/post
+  /products/list-by-ids:
+    get:
+      tags:
+        - Product
+      summary: Get product by list id
+      parameters:
+        $ref: components/parameters/@products@list-by-id.yml#/get
+      responses:
+        $ref: components/responses/@products@list-by-id.yml#/get
+  /products/{productId}/attributes:
+    get:
+      tags:
+        - Product
+      summary: Get product attributes
+      parameters:
+        $ref: components/parameters/@products@{productId}@attributes.yml#/get
+      responses:
+        $ref: components/responses/@products@{productId}@attributes.yml#/get

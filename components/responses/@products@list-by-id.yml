@@ -1,0 +1,5 @@
+get:
+  content:
+    application/json:
+      schema:
+        - $ref: Success.yml
