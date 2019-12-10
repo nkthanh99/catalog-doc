@@ -1,0 +1,14 @@
+lang: nodejs
+
+before_install:
+  npm i redoc-cli
+
+script:
+  - redoc-cli
+
+after_success:
+  - ./deploy.sh
+
+env:
+  global:
+    secure:

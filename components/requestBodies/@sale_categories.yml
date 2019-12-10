@@ -4,3 +4,11 @@ post:
     application/json:
       schema:
         $ref: ../schemas/GenericSaleCategory.yml
+      example:
+        image: http://media-server.com/sale_category/dien-thoai.png
+        isActive: 0
+        name: Dien thoai
+        code: dien-thoai
+        parentId: 3
+        products:
+        - 1

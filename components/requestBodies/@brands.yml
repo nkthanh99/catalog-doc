@@ -13,6 +13,12 @@ post:
             type: string
           logo:
             type: string
-          doc_request:
+            format: byte
+            description: base64-encoded file contents
+          docRequest:
             type: boolean
-            default: true
+            example: true
+      example:
+        name: brand-1
+        code: brand-demo
+        docRequest: true

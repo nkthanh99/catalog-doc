@@ -1,18 +1,90 @@
 type: object
+required:
+  - name
+  - brandId
+  - isBundle
+  - categoryId
+  - saleCategoryId
+  - attributeSetId
+  - unit_id
+  - warrantyMonths
+  - warrantyDescription
+  - model
+  - partNumber
+  - barcode
+  - type
+  - objective
 properties:
-  id:
+  name:
+    type: string
+  brand_id:
     type: integer
-  product_id:
+  is_bundle:
     type: integer
+  categoryId:
+    type: integer
+  saleCategoryId:
+    oneOf:
+      - type: integer
+      - type: string
+        nullable: true
+  attributeSetId:
+    type: integer
+  colorId:
+    type: integer
+  unitId:
+    type: integer
+  warrantyMonths:
+    type: integer
+  warrantyDescription:
+    type: string
+  model:
+    type: string
+  partNumber:
+    type: string
+  barcode:
+    type: string
   type:
     type: string
-  status:
+  objective:
     type: string
-  updated_by_email:
+  unitPoId:
+    type: integer
+  images:
+    type: array
+    items:
+      type: integer
+  files:
+    type: array
+    items:
+      type: integer
+  weight:
+    type: number
+    format: float
+  length:
+    type: number
+    format: float
+  width:
+    type: number
+    format: float
+  height:
+    type: number
+    format: float
+  channels:
+    type: array
+    items:
+      type: integer
+  taxIn:
+    type: number
+    format: float
+    minimum: 0
+    maximum: 100
+  taxOut:
+    type: number
+    format: float
+    minimum: 0
+    maximum: 100
+  urlKey:
     type: string
-    format: email
-  updated_by_name:
+  sellerSku:
     type: string
-  updated_at:
-    type: string
-    format: datetime  

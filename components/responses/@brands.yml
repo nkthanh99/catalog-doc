@@ -18,7 +18,9 @@ get:
                           items:
                             $ref: ../schemas/Brand.yml
   400:
-    $ref: BadRequest.yml
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer
 
 post:
   200:
@@ -27,4 +29,6 @@ post:
         schema:
           $ref: Success.yml
   400:
-    $ref: BadRequest.yml
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer

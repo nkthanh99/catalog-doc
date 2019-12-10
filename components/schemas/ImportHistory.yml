@@ -6,20 +6,20 @@ properties:
     type: string
   status:
     type: string
-  total_row:
+  totalRow:
     type: integer
-  total_row_success:
+  totalRowSuccess:
     type: integer
   path:
     type: object
   type:
     type: string
-  success_path:
+  successPath:
     type: object
   note:
     type: string
-  created_by:
+  createdBy:
     type: string
-  created_at:
+  createdAt:
     type: string
     format: datetime  

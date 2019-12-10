@@ -1,12 +1,14 @@
 get:
   - in: path
-    name: sale_channel_id
+    name: saleChannelId
     required: true
     schema:
       type: integer
+    example: 1
 patch:
   - in: path
-    name: sale_channel_id
+    name: saleChannelId
     required: true
     schema:
       type: integer  
+    example: 1

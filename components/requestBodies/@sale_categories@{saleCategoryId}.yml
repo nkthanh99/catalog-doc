@@ -8,7 +8,7 @@ patch:
           image:
             type: string
             format: url
-          is_active:
+          isActive:
             type: integer
           name:
             type: string

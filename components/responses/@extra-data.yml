@@ -1,5 +1,5 @@
 get:
-  '200':
+  200:
     content:
       application/json:
         schema:
@@ -9,5 +9,7 @@ get:
               properties:
                 result:
                   $ref: ../schemas/Extra.yml
-  '400':
-    $ref: BadRequest.yml   
+  400:
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer

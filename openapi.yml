@@ -1,0 +1,261 @@
+openapi: 3.0.0
+info:
+  title: Catalog
+  description: Product management system
+  version: 2.0.0
+servers:
+  - url: https://catalog-dev.phongvu.vn
+    description: Develop server for dev and test
+tags:
+  - name: Brand
+    description: Brand management
+  - name: Product
+    description: Product management
+  - name: Import file
+    description: Import operations
+  - name: Sale channel
+    description: Sale channel
+  - name: Product line
+    description: Product line
+  - name: Upload file
+    description: Upload operations
+  - name: Sale category
+    description: Sale category operations
+  - name: Extra data
+components:
+  securitySchemes:
+    JWT:
+      type: http
+      description: Authentication and authorization with IAM service
+      bearerFormat: JWT
+      scheme: bearer
+security:
+  - JWT: []
+paths:
+  /brands:
+    get:
+      tags:
+        - Brand
+      summary: Get list of brand
+      parameters:
+        $ref: components/parameters/@brands.yml#/get
+      responses:
+        $ref: components/responses/@brands.yml#/get
+      description:
+    post:
+      tags:
+        - Brand
+      summary: Create new brand
+      requestBody:
+        $ref: components/requestBodies/@brands.yml#/post
+      responses:
+        $ref: components/responses/@brands.yml#/post
+  /brands/{brandId}:
+    patch:
+      tags:
+        - Brand
+      summary: Patch brand
+      parameters:
+        $ref: components/parameters/@brands@{brandId}.yml#/patch
+      requestBody:
+        $ref: components/requestBodies/@brands@{brandId}.yml#/patch
+      responses:
+        $ref: components/responses/@brands@{brandId}.yml#/patch
+    get:
+      tags:
+        - Brand
+      summary: Get detail brand
+      parameters:
+        $ref: components/parameters/@brands@{brandId}.yml#/get
+      responses:
+        $ref: components/responses/@brands@{brandId}.yml#/get
+  /extra-data:
+    get:
+      summary: Get extra data with restrict
+      tags:
+        - Extra data
+      parameters:
+        $ref: components/parameters/@extra-data.yml#/get
+      responses:
+        $ref: components/responses/@extra-data.yml#/get
+  /import/history:
+    get:
+      tags:
+        - Import file
+      summary: Get import history
+      parameters:
+        $ref: components/parameters/@import@history.yml#/get
+      responses:
+        $ref: components/responses/@import@history.yml#/get
+  /upload/doc:
+    post:
+      summary: Upload excel file for import product
+      tags:
+        - Upload file
+      requestBody:
+        $ref: components/requestBodies/@upload@doc.yml#/post
+      responses:
+        $ref: components/responses/@upload@doc.yml#/post
+  /upload/image:
+    post:
+      summary: Upload logo product image
+      tags:
+        - Upload file
+      requestBody:
+        $ref: components/requestBodies/@upload@image.yml#/post
+      responses:
+        $ref: components/responses/@upload@image.yml#/post
+  /product_lines:
+    get:
+      summary: Get product line
+      tags:
+        - Product line
+      responses:
+        $ref: components/responses/@product_lines.yml#/get
+  /product_lines/{lineId}/category:
+    get:
+      summary: List of category for product line
+      tags:
+        - Product line
+      parameters:
+        $ref: components/parameters/@product_lines@{lineId}@category.yml#/get
+      responses:
+        $ref: components/responses/@product_lines@{lineId}@category.yml#/get
+  /sale_categories:
+    post:
+      summary: Create new sale category
+      tags:
+        - Sale category
+      requestBody:
+        $ref: components/requestBodies/@sale_categories.yml#/post
+      responses:
+        $ref: components/responses/@sale_categories.yml#/post
+    get:
+      tags:
+        - Sale category
+      summary: Get sale category with level
+      parameters:
+        $ref: components/parameters/@sale_categories.yml#/get
+  /sale_categories/{nodeId}/position:
+    patch:
+      summary: Move sale category node in sale category tree
+      tags:
+        - Sale category
+      parameters:
+        $ref: components/parameters/@sale_categories@{nodeId}@position.yml#/patch
+      requestBody:
+        $ref: components/requestBodies/@sale_categories@{nodeId}@position.yml#/patch
+      responses:
+        $ref: components/responses/@sale_categories@{nodeId}@position.yml#/patch
+  /sale_categories/{saleCategoryId}/children:
+    get:
+      summary: Get sale category tree with sale category as root
+      tags:
+        - Sale category
+      parameters:
+        $ref: components/parameters/@sale_categories@{saleCategoryId}@children.yml#/get
+      responses:
+        $ref: components/responses/@sale_categories@{saleCategoryId}@children.yml#/get
+  /sale_categories/{saleCategoryId}:
+    patch:
+      summary: Patch sale category
+      tags:
+        - Sale category
+      parameters:
+        $ref: components/parameters/@sale_categories@{saleCategoryId}.yml#/patch
+      requestBody:
+        $ref: components/requestBodies/@sale_categories@{saleCategoryId}.yml#/patch
+      responses:
+        $ref: components/responses/@sale_categories@{saleCategoryId}.yml#/patch
+  /sale_channels:
+    get:
+      summary: Get sale channel list
+      tags:
+        - Sale channel
+      parameters:
+        $ref: components/parameters/@sale_channels.yml#/get
+      responses:
+        $ref: components/responses/@sale_channels.yml#/get
+    post:
+      summary: Create new sale channel
+      tags:
+        - Sale channel
+      requestBody:
+        $ref: components/requestBodies/@sale_channels.yml#/post
+      responses:
+        $ref: components/responses/@sale_channels.yml#/post
+  /sale_channels/{saleChannelId}:
+    patch:
+      summary: Patch sale channel
+      tags:
+        - Sale channel
+      parameters:
+        $ref: components/parameters/@sale_channels@{saleChannelId}.yml#/patch
+      requestBody:
+        $ref: components/requestBodies/@sale_channels@{saleChannelId}.yml#/patch
+      responses:
+        $ref: components/responses/@sale_channels@{saleChannelId}.yml#/patch
+    get:
+      summary: Get sale channel detail
+      tags:
+        - Sale channel
+      parameters:
+        $ref: components/parameters/@sale_channels@{saleChannelId}.yml#/get
+      responses:
+        $ref: components/responses/@sale_channels@{saleChannelId}.yml#/get
+  /products:
+    get:
+      tags:
+        - Product
+      summary: Get product list
+      parameters:
+        $ref: components/parameters/@products.yml#/get
+      responses:
+        $ref: components/responses/@products.yml#/get
+    post:
+      tags:
+        - Product
+      summary: Create new product with generic information
+      requestBody:
+        $ref: components/requestBodies/@products.yml#/post
+      responses:
+        $ref: components/responses/@products.yml#/post
+  /products/export:
+    get:
+      tags:
+        - Product
+      summary: Export product list to excel file
+      parameters:
+        $ref: components/parameters/@products@export.yml#/get
+      responses:
+        $ref: components/responses/@products@export.yml#/get
+  /products/history/{id}:
+    get:
+      tags:
+        - Product
+      summary: Get product history
+      parameters:
+        $ref: components/parameters/@products@history@{id}.yml#/get
+      responses:
+        $ref: components/responses/@products@history@{id}.yml#/get
+  /products/import/template:
+    get:
+      tags:
+        - Product
+      summary: Get template import file for an attribute set
+      parameters:
+        $ref: components/parameters/@products@import@template.yml#/get
+      responses:
+        $ref: components/responses/@products@import@template.yml#/get
+  /products/import/{attributeSetId}:
+    post:
+      tags:
+        - Product
+      summary:
+        Upload file for import product by attribute set id
+      parameters:
+        $ref: components/parameters/@products@import@{attributeSetId}.yml#/post
+      requestBody:
+        $ref: components/requestBodies/@products@import@{attributeSetId}.yml#/post
+      reponses:
+        $ref: components/responses/@products@import@{attributeSetId}.yml#/post

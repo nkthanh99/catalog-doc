@@ -1,0 +1,6 @@
+post:
+  - in: path
+    name: attributeSetId
+    required: true
+    schema:
+      type: integer

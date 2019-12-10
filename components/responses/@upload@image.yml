@@ -11,7 +11,7 @@ post:
                 result:
                   type: object
                   properties:
-                    file_id:
+                    fileId:
                       type: integer
                     url:
                       type: string
@@ -19,4 +19,6 @@ post:
                     label:
                       type: string
   400:
-    $ref: BadRequest.yml
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer

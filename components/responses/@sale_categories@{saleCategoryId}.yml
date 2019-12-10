@@ -7,11 +7,13 @@ patch:
           properties:
             image:
               type: string
-            is_active:
+            isActive:
               type: integer
             name:
               type: string
             code:
               type: string
   400:
-    $ref: BadRequest.yml
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer

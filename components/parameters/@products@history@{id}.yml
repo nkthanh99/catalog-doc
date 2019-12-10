@@ -1,6 +1,6 @@
 get:
   - in: path
-    name: sale_category_id
+    name: id
     required: true
     schema:
-      type: integer  
+      type: integer

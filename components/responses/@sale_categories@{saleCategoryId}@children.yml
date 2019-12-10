@@ -1,0 +1,29 @@
+get:
+  200:
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                result:
+                  $ref: ../schemas/SaleCategoryNode.yml
+        example:
+          code: SUCCESS
+          result:
+            id: 1791
+            code: '007'
+            name: Sách
+            children:
+            - id: 1792
+              code: 007-001
+              name: Ebook
+              children:
+              - id: 1793
+                code: 007-001-001
+                name: Định dạng PDF
+  400:
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer

@@ -5,9 +5,9 @@ patch:
       schema:
         type: object
         properties:
-          parent_id:
+          parentId:
             type: integer
-          left_node_id:
+          leftNodeId:
             oneOf:
               - type: integer
               - type: string

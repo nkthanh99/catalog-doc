@@ -9,9 +9,11 @@ get:
             - type: object
               properties:
                 result:
-                  $ref: ../schemas/SaleChannelList.yml  
+                  $ref: ../schemas/SaleChannelList.yml
   400:
-    $ref: BadRequest.yml
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer
 post:
   200:
     description: Create sale channel successful
@@ -25,4 +27,6 @@ post:
                 result:
                   $ref: ../schemas/SaleChannel.yml
   400:
-    $ref: BadRequest.yml
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer

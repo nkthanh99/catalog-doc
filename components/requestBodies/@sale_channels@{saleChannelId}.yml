@@ -9,7 +9,7 @@ patch:
             type: string
           type:
             type: string
-          seller_id:
+          sellerId:
             type: integer
-          is_active:
-            type: integer    
+          isActive:
+            type: integer

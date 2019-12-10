@@ -1,8 +1,8 @@
 type: object
 properties:
-  current_page:
+  currentPage:
     type: integer
-  page_size:
+  pageSize:
     type: integer
-  total_items:
+  totalItems:
     type: integer  

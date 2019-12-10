@@ -1,8 +1,0 @@
-allOf:
-  - $ref: ObjectList.yml
-  - type: object
-    properties:
-      products:
-        type: array
-        items:
-          $ref: GenericProduct.yml  

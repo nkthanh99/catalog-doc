@@ -1,0 +1,16 @@
+InternalServer:
+  description: Server error
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          code:
+            type: string
+            default: ERROR
+          message:
+            type: string
+          errors:
+            type: array
+            items:
+              type: object

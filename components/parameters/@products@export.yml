@@ -1,38 +1,29 @@
 get:
   - in: query
-    name: page
-    schema:
-      type: integer
-  - in: query
-    name: pageSize
-    schema:
-      type: integer
-  - in: query
     name: query
     schema:
       type: string
-  - in: query
-    name: sortField
-    schema:
-      type: string
+    description: Query or SKU
   - in: query
     name: brandId
     schema:
       type: string
+    description: List brand id
   - in: query
     name: attributeSetId
     schema:
       type: string
-  - in: query
-    name: productLineId
-    schema:
-      type: string
+    description: Attribute set
   - in: query
     name: categoryId
     schema:
       type: string
   - in: query
     name: sellingStatus
+    schema:
+      type: string
+  - in: query
+    name: editingStatus
     schema:
       type: string
   - in: query
@@ -44,10 +35,17 @@ get:
     schema:
       type: string
   - in: query
+    name: sortField
+    schema:
+      type: string
+    example: updatedAt
+  - in: query
     name: sortOrder
     schema:
       type: string
+    example: descend
   - in: query
-    name: isBundle
+    name: exportCommon
     schema:
-      type: integer
+      type: boolean
+    example: true

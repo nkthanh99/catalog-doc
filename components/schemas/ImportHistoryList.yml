@@ -2,7 +2,7 @@ allOf:
   - $ref: ObjectList.yml
   - type: object
     properties:
-      history_list:
+      historyList:
         type: array
         items:
-          $ref: ImportHistory.yml  
+          $ref: ImportHistory.yml

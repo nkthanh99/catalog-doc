@@ -2,7 +2,7 @@ allOf:
   - $ref: ObjectList.yml
   - type: object
     properties:
-      sale_channels:
+      saleChannels:
         type: array
         items:
           $ref: SaleChannel.yml

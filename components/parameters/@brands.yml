@@ -8,16 +8,20 @@ get:
     schema:
       type: integer
       enum: [0, 1]
+    example: 0
   - in: query
-    name: approved_status
+    name: approvedStatus
     schema:
       type: integer
       enum: [0, 1]
+    example: 0
   - in: query
-    name: page_size
+    name: pageSize
     schema:
       type: integer
+    example: 10
   - in: query
     name: page
     schema:
-      type: integer  
+      type: integer
+    example: 1

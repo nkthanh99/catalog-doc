@@ -3,10 +3,12 @@ get:
     in: path
     schema:
       type: integer
+    example: 1
     required: true
 patch:
   - name: brandId
     in: path
     schema:
       type: integer
-    required: true  
+    example: 1
+    required: true

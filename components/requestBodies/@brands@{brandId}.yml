@@ -11,7 +11,13 @@ patch:
             type: string
           logo:
             type: string
-          is_active:
+            format: byte
+            description: base64-encoded file contents
+          isActive:
             type: boolean
           doc_request:
             type: integer  
+      example:
+        name: brand-1
+        code: brand-demo
+        docRequest: true

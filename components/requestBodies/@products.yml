@@ -1,0 +1,5 @@
+post:
+  content:
+    application/json:
+      schema:
+        $ref: ../schemas/GenericProduct.yml  

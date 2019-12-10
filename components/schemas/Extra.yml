@@ -11,9 +11,7 @@ properties:
           type: string
         code:
           type: string
-        url_key:
-          type: string
-  attribute_sets:
+  attributeSets:
     type: array
     items:
       type: object
@@ -22,7 +20,7 @@ properties:
           type: integer
         name:
           type: string
-  product_lines:
+  productLines:
     type: aray
     items:
       type: object
@@ -44,11 +42,11 @@ properties:
           type: string
         name:
           type: string
-        is_active:
+        isActive:
           type: integer
-        parent_id:
+        parentId:
           type: integer
-        seller_id:
+        sellerId:
           type: integer
         line_id:
           type: integer

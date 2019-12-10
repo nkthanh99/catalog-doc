@@ -11,7 +11,9 @@ get:
                 result:
                   $ref: ../schemas/SaleChannel.yml
   400:
-    $ref: BadRequest.yml
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer
 
 patch:
   200:
@@ -26,4 +28,6 @@ patch:
                 result:
                   $ref: ../schemas/SaleChannel.yml
   400:
-    $ref: BadRequest.yml
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer

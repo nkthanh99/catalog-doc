@@ -4,19 +4,19 @@ properties:
     type: string
   name:
     type: string
-  is_active:
+  isActive:
     type: integer
-  doc_request:
+  docRequest:
     type: integer
-  approved_status:
+  approvedStatus:
     type: integer
   path:
     type: string
-  internal_code:
+  internalCode:
     type: string
-  created_at:
+  createdAt:
     type: string
-    format: datetime
-  updated_at:
+    format: date-time
+  updatedAt:
     type: string
-    format: datetime  
+    format: date-time

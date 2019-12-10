@@ -1,0 +1,25 @@
+BadRequest:
+  description: Client request invalid
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          code:
+            type: string
+            default: INVALID
+          message:
+            type: string
+          errors:
+            type: array
+            items:
+              type: object
+              properties:
+                field:
+                  type: string
+                  description: Error field name
+                messages:
+                  type: array
+                  items:
+                    type: string
+                    description: Error detail message

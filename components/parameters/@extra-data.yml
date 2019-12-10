@@ -4,6 +4,6 @@ get:
     schema:
       type: string
   - in: query
-    name: restrict_data
+    name: restrictData
     schema:
       type: string

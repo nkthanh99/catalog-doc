@@ -3,12 +3,12 @@ get:
     name: page
     schema:
       type: integer
-      default: 1
+      example: 1
   - in: query
     name: pageSize
     schema:
       type: integer
-      default: 10
+      example: 10
   - in: query
     name: order
     schema:
@@ -16,7 +16,7 @@ get:
       enum:
         - asc
         - desc
-      default: desc
+      example: desc
   - in: query
     name: status
     schema:
@@ -26,10 +26,10 @@ get:
     schema:
       type: string
   - in: query
-    name: start_at
+    name: startAt
     schema:
       type: string
   - in: query
-    name: end_at
+    name: endAt
     schema:
       type: string  

@@ -1,0 +1,17 @@
+get:
+  200:
+    content:
+      application/json:
+        allOf:
+          - $ref: Success.yml
+          - type: object
+            properties:
+              result:
+                type: object
+                properties:
+                  url:
+                    type: string
+  400:
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer
