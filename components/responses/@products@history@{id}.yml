@@ -2,31 +2,20 @@ get:
   200:
     content:
       application/json:
-        allOf:
-          - $ref: Success.yml
-          - type: object
-            properties:
-              result:
-                type: object
-                properties:
-                  id:
-                    type: integer
-                  productId:
-                    type: integer
-                  type:
-                    type: string
-                  status:
-                    type: string
-                  updatedBy:
-                    type: string
-                  updatedByEmail:
-                    type: string
-                  updatedByName:
-                    type: string
-                  updatedAt:
-                    type: string
-                  body:
-                    type: string
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                result:
+                  allOf:
+                    - $ref: ../schemas/GenericProductHistory.yml
+                    - type: object
+                      properties:
+                        updatedBy:
+                          type: string
+                        body:
+                          type: string
   400:
     $ref: ClientErrors.yml#/BadRequest
   500:

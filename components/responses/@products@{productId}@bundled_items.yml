@@ -1,0 +1,40 @@
+get:
+  200:
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                result:
+                  type: array
+                  items:
+                    type: object
+                    required:
+                      - productId
+                      - sku
+                      - name
+                      - colorId
+                      - editingStatus
+                      - quantity
+                      - priority
+                    properties:
+                      productId:
+                        type: integer
+                      sku:
+                        type: string
+                      name:
+                        type: string
+                      colorId:
+                        type: string
+                      editingStatus:
+                        type: string
+                      quantity:
+                        type: integer
+                      priority:
+                        type: integer
+  400:
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer

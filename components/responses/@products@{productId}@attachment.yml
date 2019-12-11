@@ -1,0 +1,29 @@
+post:
+  200:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            fileId:
+              type: integer
+            url:
+              type: string
+              format: url
+            label:
+              type: string
+  400:
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer
+
+delete:
+  200:
+    content:
+      application/json:
+        schema:
+          $ref: Success.yml
+  400:
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer

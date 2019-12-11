@@ -1,6 +1,6 @@
-get:
+post:
   - in: path
     name: productId
-    required: true
     schema:
       type: integer
+    required: true

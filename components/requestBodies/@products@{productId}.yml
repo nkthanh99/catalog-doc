@@ -1,0 +1,112 @@
+patch:
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          data:
+            type: object
+            properties:
+              common:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  brandId:
+                    type: integer
+                  categoryId:
+                    type: integer
+                  saleCategoryId:
+                    oneOf:
+                      - type: integer
+                      - type: string
+                        nullable: true
+                  attributeSetId:
+                    type: integer
+                  colorId:
+                    type: integer
+                  warrantyMonths:
+                    type: integer
+                  warrantyDescription:
+                    type: string
+                  model:
+                    type: string
+                  partNumber:
+                    type: string
+                  barcode:
+                    type: string
+                  type:
+                    type: string
+                  objective:
+                    type: string
+                  unitId:
+                    type: integer
+                  unitPoId:
+                    type: integer
+                  weight:
+                    type: number
+                    format: float
+                  length:
+                    type: number
+                    format: float
+                  width:
+                    type: number
+                    format: float
+                  height:
+                    type: number
+                    format: float
+                  channels:
+                    type: array
+                    items:
+                      type: integer
+                  sellerSku:
+                    type: string
+                  sellingStatusCode:
+                    type: string
+              images:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    label:
+                      type: string
+                    isDisplay:
+                      type: boolean
+                    priority:
+                      type: integer
+                    status:
+                      type: integer
+              attributes:
+                type: object
+                properties:
+                  attributeSetId:
+                    type: integer
+                  attributes:
+                    type: array
+                    items:
+                      $ref: ../schemas/GenericProductAttribute.yml
+              seoInfo:
+                $ref: ../schemas/SeoConfig.yml
+              variations:
+                type: object
+                properties:
+                  productGroupId:
+                    type: integer
+              bundle:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    productId:
+                      type: integer
+                    quantity:
+                      type: integer
+                    priority:
+                      type: integer
+          comment:
+            type: string
+          status:
+            type: string
+            required: true

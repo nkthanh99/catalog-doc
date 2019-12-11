@@ -1,0 +1,17 @@
+get:
+  200:
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: ../schemas/ObjectList.yml
+            - type: object
+              properties:
+                histories:
+                  type: array
+                  items:
+                    $ref: ../schemas/GenericProductHistory.yml
+  400:
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer

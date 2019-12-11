@@ -10,7 +10,3 @@ InternalServer:
             default: ERROR
           message:
             type: string
-          result:
-            type: array
-            items:
-              type: object

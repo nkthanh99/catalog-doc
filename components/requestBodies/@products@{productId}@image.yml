@@ -1,0 +1,10 @@
+post:
+  required: true
+  content:
+    image/png:
+      schema:
+        type: object
+        properties:
+          file:
+            type: string
+            format: binary

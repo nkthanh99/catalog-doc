@@ -1,0 +1,17 @@
+post:
+  - in: path
+    name: productId
+    schema:
+      type: integer
+    required: true
+delete:
+  - in: path
+    name: productId
+    schema:
+      type: integer
+    required: true
+  - in: query
+    name: fileId
+    schema:
+      type: integer
+    required: true

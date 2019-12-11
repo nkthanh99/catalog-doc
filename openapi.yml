@@ -277,3 +277,69 @@ paths:
         $ref: components/parameters/@products@{productId}@attributes.yml#/get
       responses:
         $ref: components/responses/@products@{productId}@attributes.yml#/get
+  /products/{productId}/bundled_items:
+    get:
+      tags:
+        - Product
+      summary: Get list item of bundled product
+      parameters:
+        $ref: components/parameters/@products@{productId}@bundled_items.yml#/get
+      responses:
+        $ref: components/responses/@products@{productId}@bundled_items.yml#/get
+  /products/{productId}/history:
+    get:
+      tags:
+        - Product
+      summary: Get log history of product
+      parameters:
+        $ref: components/parameters/@products@{productId}@history.yml#/get
+      responses:
+        $ref: components/responses/@products@{productId}@history.yml#/get
+  /products/{productId}/seo_info:
+    get:
+      tags:
+        - Product
+      summary: Get seo info of product
+      parameters:
+        $ref: components/parameters/@products@{productId}@seo_info.yml#/get
+      responses:
+        $ref: components/responses/@products@{productId}@seo_info.yml#/get
+  /products/{productId}:
+    patch:
+      tags:
+        - Product
+      summary: Update product
+      requestBody:
+        $ref: components/requestBodies/@products@{productId}.yml#/patch
+      responses:
+        $ref: components/responses/@products@{productId}.yml#/patch
+  /products/{productId}/attachment:
+    post:
+      tags:
+        - Product
+      summary: Attach file to product
+      parameters:
+        $ref: components/parameters/@products@{productId}@attachment.yml#/post
+      requestBody:
+        $ref: components/requestBodies/@products@{productId}@attachment.yml#/post
+      responses:
+        $ref: components/responses/@products@{productId}@attachment.yml#/post
+    delete:
+      tags:
+        - Product
+      summary: Remove file from product
+      parameters:
+        $ref: components/parameters/@products@{productId}@attachment.yml#/delete
+      responses:
+        $ref: components/responses/@products@{productId}@attachment.yml#/delete
+  /products/{productId}/image:
+    post:
+      tags:
+        - Product
+      summary: Upload product image
+      parameters:
+        $ref: components/parameters/@products@{productId}@image.yml#/post
+      requestBody:
+        $ref: components/requestBodies/@products@{productId}@image.yml#/post
+      responses:
+        $ref: components/responses/@products@{productId}@image.yml#/post
