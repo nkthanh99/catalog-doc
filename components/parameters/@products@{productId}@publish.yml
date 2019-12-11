@@ -1,0 +1,6 @@
+patch:
+  - in: path
+    name: productId
+    schema:
+      type: integer
+    required: true

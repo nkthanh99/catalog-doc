@@ -343,3 +343,12 @@ paths:
         $ref: components/requestBodies/@products@{productId}@image.yml#/post
       responses:
         $ref: components/responses/@products@{productId}@image.yml#/post
+  /products/{productId}/publish:
+    patch:
+      tags:
+        - Product
+      summary: Publish product
+      parameters:
+        $ref: components/parameters/@products@{productId}@publish.yml#/patch
+      responses:
+        $ref: components/responses/@products@{productId}@publish.yml#/patch
