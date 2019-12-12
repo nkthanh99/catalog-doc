@@ -1,0 +1,10 @@
+post:
+  content:
+    application/json:
+      schema:
+        allOf:
+          - $ref: ../schemas/GenericProduct.yml
+          - type: object
+            properties:
+              code:
+                type: string

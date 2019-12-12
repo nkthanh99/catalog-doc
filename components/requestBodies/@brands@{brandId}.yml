@@ -15,8 +15,8 @@ patch:
             description: base64-encoded file contents
           isActive:
             type: boolean
-          doc_request:
-            type: integer  
+          docRequest:
+            type: boolean
       example:
         name: brand-1
         code: brand-demo

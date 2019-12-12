@@ -6,14 +6,12 @@ get:
   - in: query
     name: isActive
     schema:
-      type: integer
-      enum: [0, 1]
+      type: boolean
     example: 0
   - in: query
     name: approvedStatus
     schema:
-      type: integer
-      enum: [0, 1]
+      type: boolean
     example: 0
   - in: query
     name: pageSize

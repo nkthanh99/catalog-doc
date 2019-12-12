@@ -12,4 +12,4 @@ get:
   - in: query
     name: query
     schema:
-      type: string  
+      type: string

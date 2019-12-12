@@ -50,4 +50,4 @@ get:
   - in: query
     name: isBundle
     schema:
-      type: integer
+      type: boolean
