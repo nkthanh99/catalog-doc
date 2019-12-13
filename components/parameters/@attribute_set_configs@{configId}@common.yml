@@ -1,0 +1,6 @@
+get:
+  - in: path
+    name: setId
+    schema:
+      type: integer
+    required: true

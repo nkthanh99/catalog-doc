@@ -23,6 +23,7 @@ tags:
     description: Sale category operations
   - name: Extra data
   - name: Attribute
+  - name: Attribute set
 components:
   securitySchemes:
     JWT:
@@ -428,3 +429,95 @@ paths:
         $ref: components/parameters/@attributes@{attributeId}@options@{option_id}.yml#/delete
       responses:
         $ref: components/responses/@attributes@{attributeId}@options@{option_id}.yml#/delete
+  /attribute_set_configs/{configId}:
+    get:
+      tags:
+        - Attribute set
+      summary: Get attribute set config detail
+      parameters:
+        $ref: components/parameters/@attribute_set_configs@{configId}.yml#/get
+      responses:
+        $ref: components/responses/@attribute_set_configs@{configId}.yml#/get
+    patch:
+      tags:
+        - Attribute set
+      summary: Update attribute set config detail
+      parameters:
+        $ref: components/parameters/@attribute_set_configs@{configId}.yml#/patch
+      requestBody:
+        $ref: components/requestBodies/@attribute_set_configs@{configId}.yml#/patch
+      responses:
+        $ref: components/responses/@attribute_set_configs@{configId}.yml#/patch
+  /attribute_set_configs/{setId}/common:
+    get:
+      tags:
+        - Attribute set
+      summary: Get generic attribute set config
+      parameters:
+        $ref: components/parameters/@attribute_set_configs@{configId}@common.yml#/get
+      responses:
+        $ref: components/responses/@attribute_set_configs@{configId}@common.yml#/get
+  /attribute_sets:
+    get:
+      tags:
+        - Attribute set
+      summary: Get list of attribute set
+      parameters:
+        $ref: components/parameters/@attribute_sets.yml#/get
+      responses:
+        $ref: components/responses/@attribute_sets.yml#/get
+    post:
+      tags:
+        - Attribute set
+      summary: Create new attribute set
+      requestBody:
+        $ref: components/requestBodies/@attribute_sets.yml#/post
+      responses:
+        $ref: components/responses/@attribute_sets.yml#/post
+  /attribute_sets/{setId}:
+    get:
+      tags:
+        - Attribute set
+      summary: Get attribute set detail
+      parameters:
+        $ref: components/parameters/@attribute_sets@{setId}.yml#/get
+      responses:
+        $ref: components/responses/@attribute_sets@{setId}.yml#/get
+    patch:
+      tags:
+        - Attribute set
+      summary: Update attribute set
+      parameters:
+        $ref: components/parameters/@attribute_sets@{setId}.yml#/patch
+      requestBody:
+        $ref: components/requestBodies/@attribute_sets@{setId}.yml#/patch
+      responses:
+        $ref: components/responses/@attribute_sets@{setId}.yml#/patch
+  /attribute_sets/{setId}/config:
+    get:
+      tags:
+        - Attribute set
+      summary: Get detail of config attribute set
+      parameters:
+        $ref: components/parameters/@attribute_sets@{setId}@config.yml#/get
+      responses:
+        $ref: components/responses/@attribute_sets@{setId}@config.yml#/get
+    post:
+      tags:
+        - Attribute set
+      summary: Config attribute set
+      parameters:
+        $ref: components/parameters/@attribute_sets@{setId}@config.yml#/post
+      requestBody:
+        $ref: components/requestBodies/@attribute_sets@{setId}@config.yml#/post
+      responses:
+        $ref: components/responses/@attribute_sets@{setId}@config.yml#/post
+  /attribute_sets/update_products:
+    get:
+      tags:
+        - Attribute set
+      summary: API cập nhật product json phục vụ cho product listing service
+      requestBody:
+        $ref: components/requestBodies/@attribute_sets@update_products.yml#/post
+      responses:
+        $ref: components/responses/@attribute_sets@update_products.yml#/post

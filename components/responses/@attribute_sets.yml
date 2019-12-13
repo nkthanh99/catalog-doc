@@ -1,0 +1,47 @@
+get:
+  200:
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                result:
+                  allOf:
+                    - $ref: ../schemas/ObjectList.yml
+                    - type: object
+                      properties:
+                        attributeSets:
+                          type: array
+                          items:
+                            $ref: ../schemas/AttributeSet.yml
+  400:
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer
+
+post:
+  200:
+    content:
+      application/json:
+        schema:
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                result:
+                  type: object
+                  properties:
+                    name:
+                      type: string
+                    code:
+                      type: string
+                    status:
+                      type: string
+                    message:
+                      type: string
+  400:
+    $ref: ClientErrors.yml#/BadRequest
+  500:
+    $ref: ServerErrors.yml#/InternalServer

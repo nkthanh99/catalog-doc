@@ -1,0 +1,38 @@
+patch:
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          attribute_groups:
+            type: array
+            items:
+              type: object
+              properties:
+                tempId:
+                  type: integer
+                name:
+                  type: string
+                parentId:
+                  type: integer
+                priority:
+                  type: intger
+                isFlat:
+                  type: boolean
+                attributes:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      priority:
+                        type: integer
+                      textBefore:
+                        type: string
+                      textAfter:
+                        type: string
+                      isDisplayed:
+                        type: boolean
+                      highlight:
+                        type: boolean
