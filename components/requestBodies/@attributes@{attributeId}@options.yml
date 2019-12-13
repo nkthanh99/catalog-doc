@@ -1,0 +1,11 @@
+post:
+  content:
+    application/json:
+      schema:
+        type: object
+        required: true
+        properties:
+          value:
+            type: string
+          unitId:
+            type: integer

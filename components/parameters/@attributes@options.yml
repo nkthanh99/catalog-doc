@@ -1,6 +1,6 @@
 get:
   - in: query
-    name: attribute_ids
+    name: attributeIds
     required: true
     schema:
       type: array

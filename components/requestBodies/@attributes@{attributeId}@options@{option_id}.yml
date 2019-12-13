@@ -1,0 +1,10 @@
+patch:
+  content:
+    application/json:
+      schema:
+        type: object
+        properties:
+          value:
+            type: string
+          unit_id:
+            type: integer

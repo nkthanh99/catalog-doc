@@ -353,3 +353,78 @@ paths:
         $ref: components/parameters/@products@{productId}@publish.yml#/patch
       responses:
         $ref: components/responses/@products@{productId}@publish.yml#/patch
+  /attributes/options:
+    get:
+      tags:
+        - Attribute
+      summary: Get list of options for attributes
+      parameters:
+        $ref: components/parameters/@attributes@options.yml#/get
+      responses:
+        $ref: components/responses/@attributes@options.yml#/get
+  /attributes:
+    get:
+      tags:
+        - Attribute
+      summary: Get list of attribute
+      parameters:
+        $ref: components/parameters/@attributes.yml#/get
+      responses:
+        $ref: components/responses/@attributes.yml#/get
+    post:
+      tags:
+        - Attribute
+      summary: Create new attribute
+      requestBodies:
+        $ref: components/requestBodies/@attributes.yml#/post
+      responses:
+        $ref: components/responses/@attributes.yml#/post
+  /attributes/{attributeId}:
+    get:
+      tags:
+        - Attribute
+      summary: Get detail attribute
+      parameters:
+        $ref: components/parameters/@attributes@{attributeId}.yml#/get
+      responses:
+        $ref: components/responses/@attributes@{attributeId}.yml#/get
+    patch:
+      tags:
+        - Attribute
+      summary: Update attribute
+      parameters:
+        $ref: components/parameters/@attributes@{attributeId}.yml#/patch
+      requestBodies:
+        $ref: components/requestBodies/@attributes@{attributeId}.yml#/patch
+      responses:
+        $ref: components/responses/@attributes@{attributeId}.yml#/patch
+  /attributes/{attributeId}/options:
+    post:
+      tags:
+        - Attribute
+      summary: Create new option for attribute
+      parameters:
+        $ref: components/parameters/@attributes@{attributeId}@options.yml#/post
+      requestBodies:
+        $ref: components/requestBodies/@attributes@{attributeId}@options.yml#/post
+      responses:
+        $ref: components/responses/@attributes@{attributeId}@options.yml#/post
+  /attributes/{attributeId}/options/{optionId}:
+    patch:
+      tags:
+        - Attribute
+      summary: Update option
+      parameters:
+        $ref: components/parameters/@attributes@{attributeId}@options@{option_id}.yml#/patch
+      requestBodies:
+        $ref: components/requestBodies/@attributes@{attributeId}@options@{option_id}.yml#/patch
+      responses:
+        $ref: components/responses/@attributes@{attributeId}@options@{option_id}.yml#/patch
+    delete:
+      tags:
+        - Attribute
+      summary: Delete attribute
+      parameters:
+        $ref: components/parameters/@attributes@{attributeId}@options@{option_id}.yml#/delete
+      responses:
+        $ref: components/responses/@attributes@{attributeId}@options@{option_id}.yml#/delete

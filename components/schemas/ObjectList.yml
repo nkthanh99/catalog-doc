@@ -4,5 +4,5 @@ properties:
     type: integer
   pageSize:
     type: integer
-  totalItems:
-    type: integer  
+  totalRecords:
+    type: integer
