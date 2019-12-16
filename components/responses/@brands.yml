@@ -7,7 +7,7 @@ get:
             - $ref: Success.yml
             - type: object
               properties:
-                results:
+                result:
                   type: object
                   allOf:
                     - $ref: ../schemas/ObjectList.yml
@@ -27,7 +27,12 @@ post:
     content:
       application/json:
         schema:
-          $ref: Success.yml
+          allOf:
+            - $ref: Success.yml
+            - type: object
+              properties:
+                result:
+                  $ref: ../schemas/Brand.yml
   400:
     $ref: ClientErrors.yml#/BadRequest
   500:
