@@ -5,13 +5,14 @@ properties:
   name:
     type: string
   isActive:
-    type: integer
+    type: boolean
   docRequest:
-    type: integer
+    type: boolean
   approvedStatus:
-    type: integer
+    type: boolean
   path:
     type: string
+    description: Fullpath
   internalCode:
     type: string
   createdAt:
